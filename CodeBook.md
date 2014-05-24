@@ -17,7 +17,7 @@ The data included in this tidy data set include only the mean and standard devia
 
 First the partitioned data, which were separated for testing and training, were recombined to form one data set. After adding the names of each feature to the column heading for this data set, only the features containing **mean** or standard deviation (**std**) of the measurement were retained. 
 
-To this data the subject ID was added to identify to whom which subject the data belonged to. In addition the name of the activity was added to identify what activity the subject was engaged in while the data was collected.
+To this data the subject ID was added to identify which subject the data belonged to. In addition the name of the activity was added to identify what activity the subject was engaged in while the data was collected.
 
 This data set was then transformed into a smaller data set containing only the mean of each feature for each activity and each subject.
 
