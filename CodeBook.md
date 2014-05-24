@@ -17,7 +17,7 @@ The data included in this tidy data set include only the mean and standard devia
 
 First the partitioned data, which were separated for testing and training, were recombined to form one data set. After adding the names of each feature to the column heading for this data set, only the features containing **mean** or standard deviation (**std**) of the measurement were retained. 
 
-To this data the subject ID was added to identify to whom which subject the data belonged to. In addition the name of the activity was added to identify what activity the subject was engaged in while the data was collected.
+To this data the subject ID was added to identify which subject the data belonged to. In addition the name of the activity was added to identify what activity the subject was engaged in while the data was collected.
 
 This data set was then transformed into a smaller data set containing only the mean of each feature for each activity and each subject.
 
@@ -67,6 +67,7 @@ The set of variables that were estimated from these signals and are included in 
 mean(): Mean value
 std(): Standard deviation
 
+<<<<<<< HEAD
 ### Feature Selection on Tidy Data Set
 This tidy data set contains the **mean** of 66 features. These features are labeled as:
 
@@ -136,3 +137,73 @@ This tidy data set contains the **mean** of 66 features. These features are labe
 -	meanof.fBodyBodyGyroMag.std
 -	meanof.fBodyBodyGyroJerkMag.mean
 -	meanof.fBodyBodyGyroJerkMag.std
+=======
+This tidy data set contains the **mean** of 66 features. These features are:
+
+- tBodyAcc-mean()-X mean
+- tBodyAcc-mean()-Y mean
+-	tBodyAcc-mean()-Z mean
+-	tBodyAcc-std()-X mean
+-	tBodyAcc-std()-Y mean
+-	tBodyAcc-std()-Z mean
+-	tGravityAcc-mean()-X mean
+-	tGravityAcc-mean()-Y mean
+-	tGravityAcc-mean()-Z mean
+-	tGravityAcc-std()-X mean
+-	tGravityAcc-std()-Y mean
+-	tGravityAcc-std()-Z mean
+-	tBodyAccJerk-mean()-X mean
+-	tBodyAccJerk-mean()-Y mean
+-	tBodyAccJerk-mean()-Z mean
+-	tBodyAccJerk-std()-X mean
+-	tBodyAccJerk-std()-Y mean
+-	tBodyAccJerk-std()-Z mean
+-	tBodyGyro-mean()-X mean
+-	tBodyGyro-mean()-Y mean
+-	tBodyGyro-mean()-Z mean
+-	tBodyGyro-std()-X mean
+-	tBodyGyro-std()-Y mean
+-	tBodyGyro-std()-Z mean
+-	tBodyGyroJerk-mean()-X mean
+-	tBodyGyroJerk-mean()-Y mean
+-	tBodyGyroJerk-mean()-Z mean
+-	tBodyGyroJerk-std()-X mean
+-	tBodyGyroJerk-std()-Y mean
+-	tBodyGyroJerk-std()-Z mean
+-	tBodyAccMag-mean() mean
+-	tBodyAccMag-std() mean
+-	tGravityAccMag-mean() mean
+-	tGravityAccMag-std() mean
+-	tBodyAccJerkMag-mean() mean
+-	tBodyAccJerkMag-std() mean
+-	tBodyGyroMag-mean() mean
+-	tBodyGyroMag-std() mean
+-	tBodyGyroJerkMag-mean() mean
+-	tBodyGyroJerkMag-std() mean
+-	fBodyAcc-mean()-X mean
+-	fBodyAcc-mean()-Y mean
+-	fBodyAcc-mean()-Z mean
+-	fBodyAcc-std()-X mean
+-	fBodyAcc-std()-Y mean
+-	fBodyAcc-std()-Z mean
+-	fBodyAccJerk-mean()-X mean
+-	fBodyAccJerk-mean()-Y mean
+-	fBodyAccJerk-mean()-Z mean
+-	fBodyAccJerk-std()-X mean
+-	fBodyAccJerk-std()-Y mean
+-	fBodyAccJerk-std()-Z mean
+-	fBodyGyro-mean()-X mean
+-	fBodyGyro-mean()-Y mean
+-	fBodyGyro-mean()-Z mean
+-	fBodyGyro-std()-X mean
+-	fBodyGyro-std()-Y mean
+-	fBodyGyro-std()-Z mean
+-	fBodyAccMag-mean() mean
+-	fBodyAccMag-std() mean
+-	fBodyBodyAccJerkMag-mean() mean
+-	fBodyBodyAccJerkMag-std() mean
+-	fBodyBodyGyroMag-mean() mean
+-	fBodyBodyGyroMag-std() mean
+-	fBodyBodyGyroJerkMag-mean() mean
+-	fBodyBodyGyroJerkMag-std() mean
+>>>>>>> FETCH_HEAD
