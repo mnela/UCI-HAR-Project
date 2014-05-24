@@ -7,7 +7,7 @@ and has been cleaned up for the Coursera course "Getting and Cleaning Data"
 
 ## Original Data Set Information
 
-The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, they captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset was randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
+The experiments have been carried out with a group of - volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, they captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset was randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
 
@@ -67,71 +67,72 @@ The set of variables that were estimated from these signals and are included in 
 mean(): Mean value
 std(): Standard deviation
 
-This tidy data set contains the **mean** of 66 features. These features are:
+### Feature Selection on Tidy Data Set
+This tidy data set contains the **mean** of 66 features. These features are labeled as:
 
-- tBodyAcc-mean()-X mean
-- tBodyAcc-mean()-Y mean
--	tBodyAcc-mean()-Z mean
--	tBodyAcc-std()-X mean
--	tBodyAcc-std()-Y mean
--	tBodyAcc-std()-Z mean
--	tGravityAcc-mean()-X mean
--	tGravityAcc-mean()-Y mean
--	tGravityAcc-mean()-Z mean
--	tGravityAcc-std()-X mean
--	tGravityAcc-std()-Y mean
--	tGravityAcc-std()-Z mean
--	tBodyAccJerk-mean()-X mean
--	tBodyAccJerk-mean()-Y mean
--	tBodyAccJerk-mean()-Z mean
--	tBodyAccJerk-std()-X mean
--	tBodyAccJerk-std()-Y mean
--	tBodyAccJerk-std()-Z mean
--	tBodyGyro-mean()-X mean
--	tBodyGyro-mean()-Y mean
--	tBodyGyro-mean()-Z mean
--	tBodyGyro-std()-X mean
--	tBodyGyro-std()-Y mean
--	tBodyGyro-std()-Z mean
--	tBodyGyroJerk-mean()-X mean
--	tBodyGyroJerk-mean()-Y mean
--	tBodyGyroJerk-mean()-Z mean
--	tBodyGyroJerk-std()-X mean
--	tBodyGyroJerk-std()-Y mean
--	tBodyGyroJerk-std()-Z mean
--	tBodyAccMag-mean() mean
--	tBodyAccMag-std() mean
--	tGravityAccMag-mean() mean
--	tGravityAccMag-std() mean
--	tBodyAccJerkMag-mean() mean
--	tBodyAccJerkMag-std() mean
--	tBodyGyroMag-mean() mean
--	tBodyGyroMag-std() mean
--	tBodyGyroJerkMag-mean() mean
--	tBodyGyroJerkMag-std() mean
--	fBodyAcc-mean()-X mean
--	fBodyAcc-mean()-Y mean
--	fBodyAcc-mean()-Z mean
--	fBodyAcc-std()-X mean
--	fBodyAcc-std()-Y mean
--	fBodyAcc-std()-Z mean
--	fBodyAccJerk-mean()-X mean
--	fBodyAccJerk-mean()-Y mean
--	fBodyAccJerk-mean()-Z mean
--	fBodyAccJerk-std()-X mean
--	fBodyAccJerk-std()-Y mean
--	fBodyAccJerk-std()-Z mean
--	fBodyGyro-mean()-X mean
--	fBodyGyro-mean()-Y mean
--	fBodyGyro-mean()-Z mean
--	fBodyGyro-std()-X mean
--	fBodyGyro-std()-Y mean
--	fBodyGyro-std()-Z mean
--	fBodyAccMag-mean() mean
--	fBodyAccMag-std() mean
--	fBodyBodyAccJerkMag-mean() mean
--	fBodyBodyAccJerkMag-std() mean
--	fBodyBodyGyroMag-mean() mean
--	fBodyBodyGyroMag-std() mean
--	fBodyBodyGyroJerkMag-mean() mean
--	fBodyBodyGyroJerkMag-std() mean
+- meanof.tBodyAcc.mean.X
+- meanof.tBodyAcc.mean.Y
+-	meanof.tBodyAcc.mean.Z
+-	meanof.tBodyAcc.std.X
+-	meanof.tBodyAcc.std.Y
+-	meanof.tBodyAcc.std.Z
+-	meanof.tGravityAcc.mean.X
+-	meanof.tGravityAcc.mean.Y
+- meanof.tGravityAcc.mean.Z
+- meanof.tGravityAcc.std.X
+- meanof.tGravityAcc.std.Y
+- meanof.tGravityAcc.std.Z
+-	meanof.tBodyAccJerk.mean.X
+-	meanof.tBodyAccJerk.mean.Y
+-	meanof.tBodyAccJerk.mean.Z
+-	meanof.tBodyAccJerk.std.X
+-	meanof.tBodyAccJerk.std.Y
+-	meanof.tBodyAccJerk.std.Z
+-	meanof.tBodyGyro.mean.X
+-	meanof.tBodyGyro.mean.Y
+-	meanof.tBodyGyro.mean.Z
+-	meanof.tBodyGyro.std.X
+-	meanof.tBodyGyro.std.Y
+-	meanof.tBodyGyro.std.Z
+-	meanof.tBodyGyroJerk.mean.X
+-	meanof.tBodyGyroJerk.mean.Y
+-	meanof.tBodyGyroJerk.mean.Z
+-	meanof.tBodyGyroJerk.std.X
+-	meanof.tBodyGyroJerk.std.Y
+-	meanof.tBodyGyroJerk.std.Z
+-	meanof.tBodyAccMag.mean
+-	meanof.tBodyAccMag.std
+-	meanof.tGravityAccMag.mean
+-	meanof.tGravityAccMag.std
+-	meanof.tBodyAccJerkMag.mean
+-	meanof.tBodyAccJerkMag.std
+-	meanof.tBodyGyroMag.mean
+-	meanof.tBodyGyroMag.std
+-	meanof.tBodyGyroJerkMag.mean
+-	meanof.tBodyGyroJerkMag.std
+-	meanof.fBodyAcc.mean.X
+-	meanof.fBodyAcc.mean.Y
+-	meanof.fBodyAcc.mean.Z
+-	meanof.fBodyAcc.std.X
+-	meanof.fBodyAcc.std.Y
+-	meanof.fBodyAcc.std.Z
+-	meanof.fBodyAccJerk.mean.X
+-	meanof.fBodyAccJerk.mean.Y
+-	meanof.fBodyAccJerk.mean.Z
+-	meanof.fBodyAccJerk.std.X
+-	meanof.fBodyAccJerk.std.Y
+-	meanof.fBodyAccJerk.std.Z
+-	meanof.fBodyGyro.mean.X
+-	meanof.fBodyGyro.mean.Y
+-	meanof.fBodyGyro.mean.Z
+-	meanof.fBodyGyro.std.X
+-	meanof.fBodyGyro.std.Y
+-	meanof.fBodyGyro.std.Z
+-	meanof.fBodyAccMag.mean
+-	meanof.fBodyAccMag.std
+-	meanof.fBodyBodyAccJerkMag.mean
+-	meanof.fBodyBodyAccJerkMag.std
+-	meanof.fBodyBodyGyroMag.mean
+-	meanof.fBodyBodyGyroMag.std
+-	meanof.fBodyBodyGyroJerkMag.mean
+-	meanof.fBodyBodyGyroJerkMag.std
